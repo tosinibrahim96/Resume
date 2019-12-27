@@ -13,6 +13,8 @@ html {
 .container {
   max-width: 95%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .intro {
@@ -30,7 +32,7 @@ html {
       font-size: 16px;
       font-weight: 400;
       top: 110%;
-      content: "FRONT-END DEVELOPER";
+      content: "SOFTWARE DEVELOPER";
     }
     @keyframes blinker {
       from {
@@ -64,10 +66,84 @@ html {
   }
 }
 
+.info {
+  margin-top: 25%;
+  display: flex;
+  flex-direction: column;
+
+  .info__box {
+    width: 100%;
+    padding: 10px;
+    padding-top: 0;
+    border: 1px solid #c8c6cb;
+    margin-bottom: 5px;
+
+    a {
+      color: #cd9278;
+    }
+  }
+
+  .info__box--yellow {
+    a {
+      color: #e9d700;
+    }
+  }
+
+  .info__box--blue {
+    a {
+      color: #2380ae;
+    }
+  }
+
+  .info__box__header {
+    text-transform: capitalize;
+    font-size: 25px;
+  }
+
+  .info__box__desc {
+    border-bottom: 1px solid;
+    border-bottom-color: #c8c6cb30;
+    padding-bottom: 15px;
+    line-height: 1.5;
+    hyphens: auto;
+  }
+
+  .info__box__link {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #b8623f;
+  }
+}
+
 @mixin largeIntroSection {
   .intro {
-    width: 45%;
     margin-top: 15%;
+  }
+}
+
+@mixin largeInfoSection {
+  .info {
+    margin-top: 15%;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .info__box {
+      width: 50%;
+    }
+
+    .info__box__desc--borderless {
+      border-bottom: 0;
+    }
+
+    .info__box__link--special {
+      display: inline-block;
+      margin-top: 32px;
+      padding-top: 15px;
+      border-top: 1px solid;
+      border-top-color: #c8c6cb30;
+    }
   }
 }
 
@@ -88,6 +164,7 @@ html {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   @include largeIntroSection;
+  @include largeInfoSection;
 }
 
 /* 
@@ -100,4 +177,5 @@ html {
   .intro {
     width: 40%;
   }
+  @include largeInfoSection;
 }
