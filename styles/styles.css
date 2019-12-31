@@ -3,7 +3,12 @@ html {
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
   background-color: #141618;
-  color: #eee; }
+  color: #eee;
+  scroll-behavior: smooth; }
+
+body {
+  padding: 0;
+  margin: 0; }
 
 *,
 *:before,
@@ -11,31 +16,44 @@ html {
   -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
-.container {
-  max-width: 95%;
-  margin: 0 auto;
+a {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+.intro {
+  background: url("./bg-small.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
-
-.intro {
-  margin-top: 20%; }
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   .intro .intro__name {
-    font-size: 80px;
-    font-weight: 700;
+    font-size: 70px;
+    font-weight: 400;
     margin: 0;
     line-height: 1.2;
-    position: relative; }
-    .intro .intro__name::before {
+    margin-left: 5%;
+    position: relative;
+    padding-left: 0;
+    width: 70%; }
+    .intro .intro__name::after {
+      content: "";
+      display: block;
+      width: 6.5rem;
+      height: 3px;
+      background-color: #cc147f;
       position: absolute;
-      font-size: 16px;
-      font-weight: 400;
-      top: 110%;
-      content: "SOFTWARE DEVELOPER"; }
+      bottom: -10%;
+      left: 1%; }
 
 @keyframes blinker {
   from {
@@ -60,6 +78,23 @@ html {
       -webkit-animation-timing-function: ease-in-out;
       animation-direction: alternate;
       -webkit-animation-direction: alternate; }
+  .intro .intro__role {
+    margin-top: 10%;
+    margin-left: 5%;
+    line-height: 1.5;
+    font-size: 18px;
+    padding-left: 1%;
+    width: 65%; }
+  .intro .intro__social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 70%;
+    margin-left: 5%; }
+  .intro .intro__social-link {
+    margin-right: 35px; }
+    .intro .intro__social-link img {
+      width: 30px; }
 
 .info {
   margin-top: 25%;
