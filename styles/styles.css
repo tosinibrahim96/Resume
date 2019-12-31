@@ -22,7 +22,7 @@ a {
   transition: all 0.3s ease-in-out; }
 
 .intro {
-  background: url("./bg-small.png");
+  background: url("../images/bg-small.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
