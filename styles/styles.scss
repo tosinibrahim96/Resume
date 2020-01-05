@@ -110,45 +110,94 @@ a {
 .info {
   display: flex;
   flex-direction: column;
-  padding: 50px 15px 0 15px;
+  padding-top: 5%;
 
   .info__box {
     width: 100%;
-    padding: 10px;
+    padding: 25px;
     padding-top: 0;
-    margin-bottom: 5px;
-
-    a {
-      color: #26bfb5;
-
-      &:hover {
-        color: #017069;
-      }
-    }
+    padding-bottom: 10%;
   }
 
-  .hideme {
-    opacity: 0;
+  .info__box--hide {
+    opacity: 1;
   }
 
   .info__box__header {
-    text-transform: capitalize;
-    font-size: 25px;
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #cc147f;
+    margin-bottom: 10px;
+  }
+
+  .info__box--even {
+    background-color: #f1f1f1;
   }
 
   .info__box__desc {
-    border-bottom: 1px solid;
     border-bottom-color: #c8c6cb30;
     padding-bottom: 15px;
     line-height: 1.5;
     hyphens: auto;
   }
 
+  .info__box__more {
+    margin-top: 5%;
+  }
+
+  .more__aboutme {
+    display: flex;
+  }
+
+  .more__aboutme__left {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #26bfb5;
+    color: #fff;
+    position: relative;
+
+    &::after {
+      display: block;
+      width: 1px;
+      height: 150px;
+      background-color: rgba(0, 0, 0, 0.15);
+      position: absolute;
+      content: "";
+      left: 50%;
+    }
+  }
+
+  .more__aboutme__right {
+    padding-top: 0;
+    width: 85%;
+    margin-left: 5%;
+
+    .more__aboutme__header {
+      margin-top: 6%;
+      text-transform: capitalize;
+    }
+
+    .more__aboutme__content {
+      line-height: 1.5;
+    }
+  }
+
   .info__box__link {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
-    color: #b8623f;
+    color: #fff;
+    background-color: #000;
+    padding: 0.3rem 0.6rem;
+
+    &:hover {
+      background-color: #cc147f;
+    }
   }
 }
 
@@ -181,6 +230,134 @@ a {
       border-top-color: #c8c6cb30;
     }
   }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border-radius: 5px;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 19px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 5px;
+  text-transform: capitalize;
+  width: 90%;
+  border-bottom: 1px solid #8888883b;
+  margin-left: 3%;
+  margin-bottom: 5%;
+}
+
+.modal-body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #cc147f;
+  color: white;
+}
+
+.modal-frontend {
+  list-style-type: none;
+  margin-left: 5%;
+  padding-left: 0;
+  line-height: 2;
+  text-transform: capitalize;
+  width: 40%;
+
+  li {
+    position: relative;
+    font-size: 18px;
+
+    img {
+      width: 10px;
+      margin-top: -100px;
+    }
+
+    .expert__level {
+      display: block;
+      width: 100%;
+      height: 5px;
+      background-color: #26bfb5;
+      margin-bottom: 10px;
+    }
+
+    .intermediate__level {
+      display: block;
+      width: 80%;
+      margin-left: 20%;
+      height: 5px;
+      background-color: #cccc00;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.modal-frontend--right {
+  text-align: right;
 }
 
 /* 

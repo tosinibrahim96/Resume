@@ -31,60 +31,71 @@
           >
             <img src="./images/brand-linkedin.png" alt="Linkedin link"
           /></a>
-          <a
-          href="#info-section"
-          class="intro__social-link"
-        >
-          <img src="./images/brand-arrow.png" alt="Linkedin link"
-        /></a>
+          <a href="#info-section" class="intro__social-link">
+            <img src="./images/brand-arrow.png" alt="Linkedin link"
+          /></a>
         </div>
       </section>
       <section class="section info" id="info-section">
         <!--About me-->
-        <div class="info__box hideme">
+        <div class="info__box info__box--hide info__box--od">
           <p class="info__box__header">
             about me
           </p>
           <p class="info__box__desc info__box__desc--borderless">
-            I am a software Engr with 1+ years experience;. Previously, I worked
-            <a href="https://andela.com/">@Andela</a> and currently, I am part
-            of the team
-            <a href="https://www.irecharge.com.ng">@iRechargeNG</a> . Want to
-            know more?
+            I am a software Engr with 1+ years experience. Previously, I worked
+            at
+            <a href="https://andela.com/">Andela</a> and currently, I am part of
+            the team at <a href="https://www.irecharge.com.ng">iRechargeNG</a> .
+            As a person, I love to be part of any movement that inspires people
+            to believe in their abilities to grow as individuals. I strongly
+            believe that with focus and consistent effort, our wildest
+            imaginations will transform into reality.
           </p>
-          <a
-            href="http://google.com"
-            class="info__box__link info__box__link--special"
-            >click here</a
-          >
+          <div class="info__box__more">
+            <div class="more__aboutme">
+              <p class="more__aboutme__left">1</p>
+              <div class="more__aboutme__right">
+                <h2 class="more__aboutme__header">i code</h2>
+                <p class="more__aboutme__content">
+                  I love to work on projects and with teams that aims at helping
+                  to ease different processes in different aspects of people's
+                  lives. Currently, I work with Javascript and PHP.
+                </p>
+              </div>
+            </div>
+            <div class="more__aboutme">
+              <p class="more__aboutme__left">2</p>
+              <div class="more__aboutme__right">
+                <h2 class="more__aboutme__header">i teach</h2>
+                <p class="more__aboutme__content">
+                  Aside programming, I also love to work on projects or work
+                  with organisations/people that have to do with teaching and
+                  mentoring individuals that are starting their journey as
+                  software developers.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!--My Skills-->
-        <div class="info__box hideme">
+        <div class="info__box info__box--hide info__box--even">
           <p class="info__box__header">
             my skills
           </p>
           <p class="info__box__desc">
             My core competence lies in frontend development. However, I also
-            have experience working on the backend portion of some projects. I
-            have experience working with
-            <a
-              href="https://medium.com/@nirespire/what-is-cicd-concepts-in-continuous-integration-and-deployment-4fe3f6625007"
-            >
-              CI/CD tools</a
-            >,
-            <a
-              href="https://www.wrike.com/project-management-guide/faq/what-are-project-management-tools/"
-              >project management tools</a
-            >
-            and more. Need full details about my skills and the tools I use
-            during development?
+            have experience working on the backend portion of some projects.
+            Need details about my development stack?
           </p>
-          <a href="http://google.com" class="info__box__link">click here</a>
+          <a href="#" id="skills-modal__trigger" class="info__box__link"
+            >click here</a
+          >
         </div>
 
         <!--My Projects-->
-        <div class="info__box hideme">
+        <div class="info__box info__box--hide info__box--odd">
           <p class="info__box__header">
             my projects
           </p>
@@ -99,7 +110,7 @@
         </div>
 
         <!--Contact Me-->
-        <div class="info__box hideme">
+        <div class="info__box info__box--hide info__box--even">
           <p class="info__box__header">
             contact me
           </p>
@@ -114,6 +125,34 @@
           >
         </div>
       </section>
+
+      <!-- The Modal -->
+      <div id="skillsModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>languages and tools</h2>
+          </div>
+          <div class="modal-body">
+            <ul class="modal-frontend">
+              <li>html <img src="./images/html.png" alt=""> <span class="expert__level"></span></li>
+              <li>css <img src="./images/css.png" alt=""> <span class="expert__level"></span></li>
+              <li>javascript <img src="./images/javascript.png" alt=""> <span class="expert__level"></span></li>
+              <li>bootstrap <img src="./images/bootstrap.png" alt=""> <span class="expert__level"></span></li>
+              <li>reactjs <img src="./images/react.png" alt=""> <span class="expert__level"></span></li>
+              <li>redux <img src="./images/redux.png" alt=""><span class="expert__level"></span></li>
+            </ul>
+            <ul class="modal-frontend modal-frontend--right">
+              <li>php <img src="./images/php.png" alt=""><span class="intermediate__level"></span></li>
+              <li>laravel <img src="./images/laravel.png" alt=""> <span class="intermediate__level"></span></li>
+              <li>nodejs <img src="./images/nodejs.png" alt=""> <span class="intermediate__level"></span></li>
+              <li>postgreSQL <img src="./images/postgresql.png" alt=""> <span class="expert__level"></span></li>
+              <li>mySQL <img src="./images/mysql.png" alt=""> <span class="intermediate__level"></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="./scripts/index.js"></script>
   </body>
