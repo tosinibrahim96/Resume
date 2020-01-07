@@ -12,7 +12,9 @@
     <title>Ibrahim's Resume</title>
   </head>
   <body>
+    <!--Whole body container-->
     <main class="container">
+      <!--Intro/Banner section-->
       <section class="section intro">
         <h1 class="intro__name">
           Hi, I am Ibrahim<span class="intro__name--dot">.</span>
@@ -35,13 +37,14 @@
           /></a>
         </div>
       </section>
+      <!--Section from About me to Contact me, just before the footer-->
       <section class="section info" id="info-section">
         <!--About me-->
-        <div class="info__box info__box--hide info__box--od">
+        <section class="info__box info__box--hide">
           <p class="info__box__header">
             about me
           </p>
-          <p class="info__box__desc info__box__desc--borderless">
+          <p class="info__box__desc">
             I am a software Engr with 1+ years experience. Previously, I worked
             at
             <a href="https://andela.com/">Andela</a> and currently, I am part of
@@ -51,23 +54,23 @@
             believe that with focus and consistent effort, our wildest
             imaginations will transform into reality.
           </p>
-          <div class="info__box__more">
-            <div class="more__aboutme">
-              <p class="more__aboutme__left">1</p>
-              <div class="more__aboutme__right">
-                <h2 class="more__aboutme__header">i code</h2>
-                <p class="more__aboutme__content">
+          <div class="info__box__icodeiteach">
+            <div class="icodeiteach__item">
+              <p class="icodeiteach__item__left">1</p>
+              <div class="icodeiteach__item__right">
+                <h2 class="icodeiteach__item__header">i code</h2>
+                <p class="icodeiteach__item__content">
                   I love to work on projects and with teams that aims at helping
                   to ease different processes in different aspects of people's
                   lives. Currently, I work with Javascript and PHP.
                 </p>
               </div>
             </div>
-            <div class="more__aboutme">
-              <p class="more__aboutme__left">2</p>
-              <div class="more__aboutme__right">
-                <h2 class="more__aboutme__header">i teach</h2>
-                <p class="more__aboutme__content">
+            <div class="icodeiteach__item">
+              <p class="icodeiteach__item__left">2</p>
+              <div class="icodeiteach__item__right">
+                <h2 class="icodeiteach__item__header">i teach</h2>
+                <p class="icodeiteach__item__content">
                   Aside programming, I also love to work on projects or work
                   with organisations/people that have to do with teaching and
                   mentoring individuals that are starting their journey as
@@ -76,10 +79,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!--My Skills-->
-        <div class="info__box info__box--hide info__box--even">
+        <section class="info__box info__box--hide info__box--even">
           <p class="info__box__header">
             my skills
           </p>
@@ -88,13 +91,11 @@
             have experience working on the backend portion of some projects.
             Need details about my development stack?
           </p>
-          <a href="#" id="skills-modal__trigger" class="info__box__link"
-            >click here</a
-          >
-        </div>
+          <a href="#" id="skills-modal__trigger" class="button">click here</a>
+        </section>
 
         <!--My Projects-->
-        <div class="info__box info__box--hide info__box--odd">
+        <div class="info__box info__box--hide">
           <p class="info__box__header">
             my projects
           </p>
@@ -103,34 +104,42 @@
             found on
             <a href="https://github.com/tosinibrahim96"> my github profile</a>.
           </p>
-          <div class="info__box__images">
-            <div class="image__container">
-              <img src="./images/shoppy-sm.png" alt="Avatar" class="image" />
-              <div class="image__middle">
-                <a
-                  href="https://shoppyreact.herokuapp.com/login"
-                  class="info__box__link"
+          <div class="project__images">
+            <div class="projectimage__item">
+              <img
+                src="./images/shoppy-sm.png"
+                alt="Avatar"
+                class="projectimage__item__image"
+              />
+              <div class="projectimage__item__center">
+                <a href="https://shoppyreact.herokuapp.com/login" class="button"
                   >view project</a
                 >
               </div>
             </div>
-            <div class="image__container">
-              <img src="./images/rockband-sm.png" alt="Avatar" class="image" />
-              <div class="image__middle">
+            <div class="projectimage__item">
+              <img
+                src="./images/rockband-sm.png"
+                alt="Avatar"
+                class="projectimage__item__image"
+              />
+              <div class="projectimage__item__center">
                 <a
                   href="https://tosinibrahim96.github.io/rockband/"
-                  class="info__box__link"
+                  class="button"
                   >view project</a
                 >
               </div>
             </div>
 
-            <div class="image__container">
-              <img src="./images/portfolio-sm.png" alt="Avatar" class="image" />
-              <div class="image__middle">
-                <a
-                  href="https://dev-alawish.netlify.com/"
-                  class="info__box__link"
+            <div class="projectimage__item">
+              <img
+                src="./images/portfolio-sm.png"
+                alt="Avatar"
+                class="projectimage__item__image"
+              />
+              <div class="projectimage__item__center">
+                <a href="https://dev-alawish.netlify.com/" class="button"
                   >view project</a
                 >
               </div>
@@ -143,7 +152,7 @@
           <p class="info__box__header">
             contact me
           </p>
-          <p class="info__box__desc info__box__desc--borderless">
+          <p class="info__box__desc">
             Just want to say hi or you have an interesting idea that needs my
             contribution?
           </p>
@@ -192,7 +201,7 @@
                 required
               ></textarea>
 
-              <button class="info__box__link" type="submit">
+              <button class="button" type="submit">
                 send message
               </button>
             </form>
@@ -200,16 +209,21 @@
         </div>
       </section>
 
+      <!-- Footer -->
+      <footer class="footer">
+        &copy; Created by Ibrahim Alausa - 2020
+      </footer>
+
       <!-- The Modal -->
       <div id="skillsModal" class="modal">
         <!-- Modal content -->
-        <div class="modal-content">
-          <div class="modal-header">
-            <span class="close">&times;</span>
+        <div class="modal__content">
+          <div class="modal__header">
+            <span class="modal__content__close">&times;</span>
             <h2>languages and tools</h2>
           </div>
-          <div class="modal-body">
-            <ul class="modal-frontend">
+          <div class="modal__body">
+            <ul class="modal__skills">
               <li>
                 html <img src="./images/html.png" alt="" />
                 <span class="expert__level"></span>
@@ -236,7 +250,7 @@
                 ></span>
               </li>
             </ul>
-            <ul class="modal-frontend modal-frontend--right">
+            <ul class="modal__skills modal__skills--right">
               <li>
                 php <img src="./images/php.png" alt="" /><span
                   class="intermediate__level"
@@ -260,6 +274,7 @@
               </li>
             </ul>
           </div>
+          <div class="modal__footer"></div>
         </div>
       </div>
     </main>

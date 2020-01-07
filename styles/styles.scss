@@ -1,3 +1,4 @@
+/*General*/
 html {
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
@@ -20,8 +21,20 @@ body {
 a {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+
+  &:link,
+  &:visited {
+    color: #26bfb5;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: #11605b;
+  }
 }
 
+/*Banner*/
 .intro {
   background: url("../images/bg-small.png");
   background-repeat: no-repeat;
@@ -107,87 +120,13 @@ a {
   }
 }
 
+/*All content from About me to Contact me */
 .info {
   display: flex;
   flex-direction: column;
   padding-top: 5%;
 
-  .info__box {
-    width: 100%;
-    padding: 25px;
-    padding-top: 0;
-    padding-bottom: 10%;
-  }
-
-  .info__box--hide {
-    opacity: 1;
-  }
-
-  .info__box__header {
-    font-size: 20px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    color: #cc147f;
-    margin-bottom: 10px;
-  }
-
-  .info__box--even {
-    background-color: #f1f1f1;
-  }
-
-  .info__box__desc {
-    border-bottom-color: #c8c6cb30;
-    padding-bottom: 15px;
-    line-height: 1.9;
-    hyphens: auto;
-  }
-
-  .info__box__more {
-    margin-top: 5%;
-  }
-
-  .more__aboutme {
-    display: flex;
-  }
-
-  .more__aboutme__left {
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #26bfb5;
-    color: #fff;
-    position: relative;
-
-    &::after {
-      display: block;
-      width: 1px;
-      height: 150px;
-      background-color: rgba(0, 0, 0, 0.15);
-      position: absolute;
-      content: "";
-      left: 50%;
-    }
-  }
-
-  .more__aboutme__right {
-    padding-top: 0;
-    width: 85%;
-    margin-left: 5%;
-
-    .more__aboutme__header {
-      margin-top: 6%;
-      text-transform: capitalize;
-    }
-
-    .more__aboutme__content {
-      line-height: 1.9;
-    }
-  }
-
-  .info__box__link {
+  .button {
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
@@ -201,27 +140,104 @@ a {
   }
 }
 
-.info__box__images {
+/*Generic to all sections*/
+.info__box {
+  width: 100%;
+  padding: 25px;
+  padding-top: 0;
+  padding-bottom: 10%;
+}
+
+.info__box__header {
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #cc147f;
+  margin-bottom: 10px;
+}
+
+.info__box__desc {
+  border-bottom-color: #c8c6cb30;
+  padding-bottom: 15px;
+  line-height: 1.9;
+  hyphens: auto;
+}
+
+.info__box--hide {
+  opacity: 1;
+}
+.info__box--even {
+  background-color: #f1f1f1;
+}
+
+/* I code and teach part of about me*/
+.info__box__icodeiteach {
+  margin-top: 5%;
+}
+
+.icodeiteach__item {
+  display: flex;
+}
+
+.icodeiteach__item__left {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #26bfb5;
+  color: #fff;
+  position: relative;
+
+  &::after {
+    display: block;
+    width: 1px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.15);
+    position: absolute;
+    content: "";
+    left: 50%;
+  }
+}
+
+.icodeiteach__item__right {
+  padding-top: 0;
+  width: 85%;
+  margin-left: 5%;
+}
+
+.icodeiteach__item__header {
+  margin-top: 6%;
+  text-transform: capitalize;
+}
+
+.icodeiteach__item__content {
+  line-height: 1.9;
+}
+
+/*Images in the project section*/
+.project__images {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
 }
 
-.image__container {
+.projectimage__item {
   position: relative;
   width: 100%;
   margin-bottom: 30px;
 
-  &:hover .image {
+  &:hover .projectimage__item__image {
     opacity: 0.3;
   }
 
-  &:hover .image__middle {
+  &:hover .projectimage__item__center {
     opacity: 1;
   }
 }
 
-.image {
+.projectimage__item__image {
   opacity: 1;
   display: block;
   width: 100%;
@@ -230,7 +246,7 @@ a {
   backface-visibility: hidden;
 }
 
-.image__middle {
+.projectimage__item__center {
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
@@ -241,11 +257,10 @@ a {
   text-align: center;
 }
 
-.image__text {
-  background-color: #4caf50;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
+/*Contact form*/
+.contactform__container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
 }
 
 input[type="text"],
@@ -276,43 +291,17 @@ button[type="submit"] {
   text-transform: capitalize;
 }
 
-.contactform__container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
+/*Footer section */
+.footer {
+  background: #eef1f2;
+  color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-@mixin largeIntroSection {
-  .intro {
-    margin-top: 15%;
-  }
-}
+/*The modal*/
 
-@mixin largeInfoSection {
-  .info {
-    margin-top: 15%;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
-
-    .info__box {
-      width: 50%;
-    }
-
-    .info__box__desc--borderless {
-      border-bottom: 0;
-    }
-
-    .info__box__link--special {
-      display: inline-block;
-      margin-top: 32px;
-      padding-top: 15px;
-      border-top: 1px solid;
-      border-top-color: #c8c6cb30;
-    }
-  }
-}
-
-/* The Modal (background) */
+/* (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -328,7 +317,7 @@ button[type="submit"] {
 }
 
 /* Modal Content */
-.modal-content {
+.modal__content {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -342,45 +331,7 @@ button[type="submit"] {
   animation-duration: 0.4s;
 }
 
-/* Add Animation */
-@-webkit-keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes animatetop {
-  from {
-    top: -300px;
-    opacity: 0;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-/* The Close Button */
-.close {
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  margin-top: 19px;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.modal-header {
+.modal__header {
   padding: 2px 5px;
   text-transform: capitalize;
   width: 90%;
@@ -389,18 +340,12 @@ button[type="submit"] {
   margin-bottom: 5%;
 }
 
-.modal-body {
+.modal__body {
   display: flex;
   flex-wrap: wrap;
 }
 
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #cc147f;
-  color: white;
-}
-
-.modal-frontend {
+.modal__skills {
   list-style-type: none;
   margin-left: 5%;
   padding-left: 0;
@@ -436,8 +381,70 @@ button[type="submit"] {
   }
 }
 
-.modal-frontend--right {
+.modal__skills--right {
   text-align: right;
+}
+
+.modal__footer {
+  padding: 16px;
+}
+
+/* The Close Button */
+.modal__content__close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 19px;
+
+  &:hover,
+  &:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+/* Add modal Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/*Start design for large screens*/
+@mixin largeIntroSection {
+  .intro {
+    margin-top: 15%;
+  }
+}
+
+@mixin largeInfoSection {
+  .info {
+    margin-top: 15%;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .info__box {
+      width: 50%;
+    }
+  }
 }
 
 /* 

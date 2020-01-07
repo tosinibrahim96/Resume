@@ -19,7 +19,7 @@
 
     const skillsModal = document.getElementById("skillsModal");
     const skillsmodalTrigger = document.getElementById("skills-modal__trigger");
-    const span = document.querySelector(".close");
+    const span = document.querySelector(".modal__content__close");
 
     skillsmodalTrigger.onclick = function(event) {
       event.preventDefault();
