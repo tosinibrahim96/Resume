@@ -160,7 +160,11 @@ a {
   width: 100%;
   padding: 8%;
   padding-top: 0;
-  padding-bottom: 10%; }
+  padding-bottom: 10%;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  transition: all 1s ease-in; }
 
 .info__box__header {
   font-size: 20px;
@@ -178,7 +182,7 @@ a {
   -ms-hyphens: auto;
   hyphens: auto; }
 
-.info__box--hide {
+.info__box--show {
   opacity: 1; }
 
 .info__box--even {
