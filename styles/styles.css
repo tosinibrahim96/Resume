@@ -404,9 +404,9 @@ button[type="submit"] {
   .skills__list li {
     font-size: calc(18px + 8 * ((100vw - 768px) / 960)); }
   .project__images {
-    -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly; }
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
   .projectimage__item {
     width: 49%; } }
 
